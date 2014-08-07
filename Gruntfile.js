@@ -68,7 +68,7 @@ module.exports = function(grunt) {
       sass: {
         files: [
           'assets/sass/*.scss',
-          'assets/sass/bootstrap/*.scss'
+          'assets/sass/lausive/*.scss'
         ],
         tasks: ['sass', 'version']
       },
