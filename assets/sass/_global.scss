@@ -1,0 +1,20 @@
+// General styles
+
+body
+{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection
+{
+    color: #efefef;
+    background-color: $brand-info;
+}
+
+// Fix Bootstrap styles
+
+.label
+{
+    border-radius: 0;
+}
