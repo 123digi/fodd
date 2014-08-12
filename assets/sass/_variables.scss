@@ -14,6 +14,9 @@ $gray:                   lighten(#000, 33.5%) !default; // #555
 $gray-light:             lighten(#000, 46.7%) !default; // #777
 $gray-lighter:           lighten(#000, 93.5%) !default; // #eee
 
+$gray-custom-light:        #efefef;
+$gray-custom-dark:        #c5c5c5;
+
 $brand-primary:         #213639;
 $brand-success:         #38d06b;
 $brand-info:            #29bec4;
@@ -25,7 +28,7 @@ $brand-danger:          #f5423b;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #efefef;
+$body-bg:               $gray-custom-light;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -175,7 +178,7 @@ $btn-link-disabled-color:        $gray-light !default;
 //##
 
 //** `<input>` background color
-$input-bg:                       #efefef;
+$input-bg:                       $body-bg;
 //** `<input disabled>` background color
 $input-bg-disabled:              $gray-lighter !default;
 
@@ -346,7 +349,7 @@ $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
 $navbar-default-bg:                #ffffff !default;
-$navbar-default-border:            #c6c6c6;
+$navbar-default-border:            $gray-custom-dark;
 
 // Navbar links
 $navbar-default-link-color:                $gray-darker;
