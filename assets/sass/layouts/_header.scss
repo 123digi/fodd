@@ -1,1 +1,32 @@
-.banner { }
+.banner
+{
+    border-width: 0 0 4px;
+
+    .navbar-header
+    {
+        .navbar-brand
+        {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 70px;
+
+            img
+            {
+                height: 70px;
+            }
+        }
+
+        .navbar-brand-description
+        {
+            display: flex;
+            margin-top: 27px;
+            font-size: 0.9em;
+            color: #aaaaaa;
+        }
+    }
+
+    nav
+    {
+        font-weight: 600;
+    }
+}
