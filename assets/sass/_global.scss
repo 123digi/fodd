@@ -20,9 +20,45 @@ a
     }
 }
 
-// Fix Bootstrap styles
+// Fix & expand Bootstrap styles
 
 .label
 {
     border-radius: 0;
+}
+
+.pager
+{
+    a
+    {
+        &:hover
+        {
+            color: #ffffff;
+        }
+    }
+}
+
+.nav
+{
+    &>li
+    {
+        &>a
+        {
+            &:hover
+            {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .dropdown
+    {
+        .dropdown-toggle
+        {
+            &:focus
+            {
+                color: #ffffff;
+            }
+        }
+    }
 }
