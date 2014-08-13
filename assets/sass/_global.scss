@@ -12,6 +12,14 @@ body
     background-color: $brand-info;
 }
 
+a
+{
+    &:hover
+    {
+        text-decoration: none;
+    }
+}
+
 // Fix Bootstrap styles
 
 .label
