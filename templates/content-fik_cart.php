@@ -6,10 +6,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="entry-header">
-        <h1 class="entry-title"><?php _e('Cart','twentytwelve'); ?></h1>
-    </header>
-
     <?php the_fik_checkout(); ?>
 
     <div class="entry-content">
