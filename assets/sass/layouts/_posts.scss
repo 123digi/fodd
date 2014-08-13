@@ -1,4 +1,21 @@
-.hentry header { }
+.hentry
+{
+    margin-bottom: 30px;
+
+    header
+    {
+        .entry-title
+        {
+            a
+            {
+                font-size: $font-size-h4;
+            }
+        }
+    }
+}
+
+
+
 .hentry time { }
 .hentry .byline { }
 .hentry .entry-content { }
