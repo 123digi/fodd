@@ -22,8 +22,8 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
   add_image_size('store-product-thumb', 260, 245, true);
-  add_image_size('blog-full-width-thumb', 1200, 500, true);
-  add_image_size('blog-sidebar-thumb', 850, 500, true);
+  add_image_size('post-custom-thumbnail', 1200, 500, true);
+  add_image_size('post-custom-sidebar-thumbnail', 850, 500, true);
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
