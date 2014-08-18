@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Sidebar left template
+Template Name: No sidebar template
 */
 ?>
 
