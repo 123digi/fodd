@@ -13,8 +13,10 @@
   ?>
 
   <?php if ( is_post_type_archive('fik_product') ) : ?>
-      <section class="sidebar-full sidebar-top">
-          <?php dynamic_sidebar('sidebar-store-top'); ?>
+      <section class="jumbotron sidebar-full sidebar-top">
+         <div class="container">
+           <?php dynamic_sidebar('sidebar-store-top'); ?>
+         </div>
       </section>
   <?php endif; ?>
 
