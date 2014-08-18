@@ -1,1 +1,48 @@
-.sidebar { }
+.sidebar
+{
+
+    .widget
+    {
+        background-color: #ffffff;
+        border-left: 4px solid $gray-custom-dark;
+        padding: 30px 15px;
+        margin-bottom: 30px;
+
+        h3
+        {
+            font-size: $font-size-base;
+            color: $brand-primary;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding-left: 20px;
+            color: $gray-dark;
+            margin-bottom: 0;
+
+            li
+            {
+                margin: 8px 0;
+
+                &:last-child
+                {
+                    margin-bottom: 0;
+                }
+            }
+
+            a
+            {
+                color: $gray-dark;
+
+                &:hover
+                {
+                    color: $brand-info;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
