@@ -81,7 +81,28 @@
 {
     &.sidebar-top
     {
-        margin-top: 100px;
-        margin-bottom: -95px;
+        margin-top: 70px;
+        margin-bottom: -80px;
+
+        .widget
+        {
+            &:first-child
+            {
+                h3
+                {
+                    margin-top: 0;
+                }
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6
+            {
+                color: #ffffff;
+            }
+        }
     }
 }
