@@ -1,0 +1,17 @@
+.btn
+{
+    font-weight: 600;
+
+    &.disabled
+    {
+        background-color: $disabled-custom;
+        color: #ffffff;
+        border: 1px solid $disabled-custom;
+
+        &:hover
+        {
+            color: $disabled-custom;
+            background-color: #ffffff;
+        }
+    }
+}
