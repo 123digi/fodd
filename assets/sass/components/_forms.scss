@@ -1,0 +1,14 @@
+.form-control,
+.has-error .form-control,
+.has-warning .form-control,
+.has-success .form-control
+{
+    box-shadow: none;
+    -webkit-box-shadow: none;
+
+    &:focus
+    {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+}

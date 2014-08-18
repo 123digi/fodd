@@ -63,8 +63,11 @@
             border-color: $brand-danger;
         }
     }
+}
 
-    &.search-submit
+.input-group-btn
+{
+    button
     {
         height: 34px;
     }
