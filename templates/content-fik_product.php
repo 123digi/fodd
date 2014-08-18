@@ -22,6 +22,7 @@
 </article>
 
 <?php else: ?>
+
     <?php dynamic_sidebar('sidebar-product-top'); ?>
 
     <article itemscope itemtype="http://schema.org/Product" id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
