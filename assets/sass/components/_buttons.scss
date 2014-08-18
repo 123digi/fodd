@@ -1,5 +1,10 @@
 .btn
 {
+    &:active
+    {
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
 
     &.disabled
     {
@@ -21,7 +26,10 @@
 
     &.btn-primary
     {
-        &:hover
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
         {
             color: $brand-primary;
             border-color: $brand-primary;
@@ -30,7 +38,10 @@
 
     &.btn-success
     {
-        &:hover
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
         {
             color: $brand-success;
             border-color: $brand-success;
@@ -39,7 +50,10 @@
 
     &.btn-info
     {
-        &:hover
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
         {
             color: $brand-info;
             border-color: $brand-info;
@@ -48,7 +62,10 @@
 
     &.btn-warning
     {
-        &:hover
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
         {
             color: $brand-warning;
             border-color: $brand-warning;
@@ -57,10 +74,60 @@
 
     &.btn-danger
     {
-        &:hover
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
         {
             color: $brand-danger;
             border-color: $brand-danger;
+        }
+    }
+}
+
+.btn-group
+{
+    &.open
+    {
+        &>.dropdown-toggle
+        {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+
+            &.btn
+            {
+                background-color: transparent;
+            }
+
+            &.btn-primary
+            {
+                color: $brand-primary;
+                border-color: $brand-primary;
+            }
+
+            &.btn-info
+            {
+                color: $brand-info;
+                border-color: $brand-info;
+            }
+
+            &.btn-warning
+            {
+                color: $brand-warning;
+                border-color: $brand-warning;
+            }
+
+            &.btn-danger
+            {
+                color: $brand-danger;
+                border-color: $brand-danger;
+            }
+
+            &.btn-success
+            {
+                color: $brand-success;
+                border-color: $brand-success;
+            }
         }
     }
 }
