@@ -12,6 +12,12 @@
     get_template_part('templates/header');
   ?>
 
+  <?php if ( is_post_type_archive('fik_product') ) : ?>
+      <section class="sidebar-full sidebar-top">
+          <?php dynamic_sidebar('sidebar-store-top'); ?>
+      </section>
+  <?php endif; ?>
+
   <div class="wrap container" role="document">
     <div class="content row">
       <?php if (roots_display_sidebar()) : ?>
