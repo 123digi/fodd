@@ -1,6 +1,5 @@
 .btn
 {
-    font-weight: 600;
 
     &.disabled
     {
@@ -13,5 +12,60 @@
             color: $disabled-custom;
             background-color: #ffffff;
         }
+    }
+
+    &:hover
+    {
+        background-color: transparent;
+    }
+
+    &.btn-primary
+    {
+        &:hover
+        {
+            color: $brand-primary;
+            border-color: $brand-primary;
+        }
+    }
+
+    &.btn-success
+    {
+        &:hover
+        {
+            color: $brand-success;
+            border-color: $brand-success;
+        }
+    }
+
+    &.btn-info
+    {
+        &:hover
+        {
+            color: $brand-info;
+            border-color: $brand-info;
+        }
+    }
+
+    &.btn-warning
+    {
+        &:hover
+        {
+            color: $brand-warning;
+            border-color: $brand-warning;
+        }
+    }
+
+    &.btn-danger
+    {
+        &:hover
+        {
+            color: $brand-danger;
+            border-color: $brand-danger;
+        }
+    }
+
+    &.search-submit
+    {
+        height: 34px;
     }
 }
