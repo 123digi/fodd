@@ -74,6 +74,52 @@
                 color: $brand-info;
             }
         }
+
+        #wp-calendar
+        {
+            width: 100%;
+
+            caption
+            {
+                margin-bottom: 10px;
+                font-weight: $headings-font-weight;
+                color: $brand-primary;
+            }
+
+            thead
+            {
+
+                th
+                {
+                    text-align: center;
+                    color: $brand-primary;
+                    font-weight: $headings-font-weight;
+                }
+            }
+
+            tbody
+            {
+
+                td
+                {
+                    text-align: center;
+                    color: $brand-primary;
+                }
+            }
+
+            tfoot
+            {
+                #next
+                {
+                    text-align: right;
+                }
+
+                td
+                {
+                    height: 30px;
+                }
+            }
+        }
     }
 }
 
