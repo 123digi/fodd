@@ -3,10 +3,3 @@
 
 
 </div>
-
-
-<script>
-
-jQuery('.carousel').carousel();
-
-</script>
