@@ -17,14 +17,6 @@ function pith_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
-  register_sidebar(array(
-    'name'          => __('Home Bottom', 'roots'),
-    'id'            => 'sidebar-home-bottom',
-    'before_widget' => '<section class="widget %1$s %2$s">',
-    'after_widget'  => '</section>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
-  ));
 //
 //  register_sidebar(array(
 //    'name'          => __('Store Top', 'roots'),
