@@ -13,10 +13,8 @@
   ?>
 
   <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-top' ) ) : ?>
-      <section class="jumbotron sidebar-full sidebar-top">
-         <div class="container">
-           <?php dynamic_sidebar('sidebar-home-top'); ?>
-         </div>
+      <section class="jumbotron sidebar-full sidebar-top sidebar-home">
+        <?php dynamic_sidebar('sidebar-home-top'); ?>
       </section>
   <?php endif; ?>
 
@@ -34,7 +32,7 @@
   </div><!-- /.wrap -->
 
   <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-bottom' ) ) : ?>
-      <section class="jumbotron sidebar-full sidebar-bottom">
+      <section class="jumbotron sidebar-full sidebar-bottom sidebar-home">
          <div class="container">
            <?php dynamic_sidebar('sidebar-home-bottom'); ?>
          </div>
