@@ -9,8 +9,8 @@ function pith_widgets_init() {
 // Sidebars
 
   register_sidebar(array(
-    'name'          => __('Store Top', 'roots'),
-    'id'            => 'sidebar-store-top',
+    'name'          => __('Home Top', 'roots'),
+    'id'            => 'sidebar-home-top',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',

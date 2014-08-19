@@ -12,10 +12,10 @@
     get_template_part('templates/header');
   ?>
 
-  <?php if ( is_post_type_archive('fik_product') ) : ?>
+  <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-top' ) ) : ?>
       <section class="jumbotron sidebar-full sidebar-top">
          <div class="container">
-           <?php dynamic_sidebar('sidebar-store-top'); ?>
+           <?php dynamic_sidebar('sidebar-home-top'); ?>
          </div>
       </section>
   <?php endif; ?>
