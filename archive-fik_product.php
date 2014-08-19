@@ -1,5 +1,3 @@
-<?php dynamic_sidebar('sidebar-store-main'); ?>
-
 <?php if (!have_posts()) : ?>
     <div class="alert alert-warning">
         <?php _e('Sorry, no results were found.', 'roots'); ?>
@@ -8,9 +6,9 @@
 <?php endif; ?>
 
 <div class="row">
-<?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('templates/content-fik_product', get_post_format()); ?>
-<?php endwhile; ?>
+    <?php while (have_posts()) : the_post(); ?>
+        <?php get_template_part('templates/content-fik_product', get_post_format()); ?>
+    <?php endwhile; ?>
 </div>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
@@ -22,8 +20,4 @@
           </ul>
        </div>
     </nav>
-<?php endif; ?>
-
-<?php if ( is_active_sidebar( 'sidebar-store-bottom' ) ) : ?>
-    <?php dynamic_sidebar('sidebar-store-bottom'); ?>
 <?php endif; ?>
