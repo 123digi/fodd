@@ -134,6 +134,5 @@ function pith_widgets_init() {
 //    'before_title'  => '<h3>',
 //    'after_title'   => '</h3>',
 //  ));
-
 }
 add_action('widgets_init', 'pith_widgets_init');
