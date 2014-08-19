@@ -123,13 +123,12 @@
     }
 }
 
+// widgets full-width
+
 .sidebar-full
 {
-    &.sidebar-top
+    &.sidebar-full
     {
-        margin-top: 70px;
-        margin-bottom: -80px;
-
         .widget
         {
             &:first-child
@@ -149,6 +148,68 @@
             {
                 color: #ffffff;
             }
+
+            ul
+            {
+                list-style: none;
+
+                li
+                {
+                    display: inline-block;
+
+                    &:after
+                    {
+                        content: ',';
+                    }
+
+                    &:last-child
+                    {
+                        &:after
+                        {
+                            content: '';
+                        }
+                    }
+                }
+            }
+
+            a
+            {
+                color: $brand-primary;
+            }
+
+            button
+            {
+                &.search-submit
+                {
+                    background-color: $brand-primary;
+                    border-color: $brand-primary;
+                    color: #ffffff;
+
+                    &:hover,
+                    &:focus,
+                    &:active,
+                    &.active,
+                    {
+                        background-color: transparent;
+                        color: $brand-primary;
+                        border-color: $brand-primary;
+                    }
+                }
+            }
+
+            .search-field.form-control
+            {
+                &:focus
+                {
+                    border-color: $brand-primary;
+                }
+            }
+        }
+
+        &.sidebar-top
+        {
+            margin-top: 70px;
+            margin-bottom: -80px;
         }
     }
 }

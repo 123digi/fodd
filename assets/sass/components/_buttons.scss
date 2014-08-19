@@ -19,7 +19,10 @@
         }
     }
 
-    &:hover
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
     {
         background-color: transparent;
     }
