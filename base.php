@@ -33,6 +33,14 @@
     </div><!-- /.content -->
   </div><!-- /.wrap -->
 
+  <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-bottom' ) ) : ?>
+      <section class="jumbotron sidebar-full sidebar-bottom">
+         <div class="container">
+           <?php dynamic_sidebar('sidebar-home-bottom'); ?>
+         </div>
+      </section>
+  <?php endif; ?>
+
   <?php get_template_part('templates/footer'); ?>
 
 </body>
