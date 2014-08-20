@@ -14,12 +14,17 @@
             {
                 height: 70px;
             }
+
+            img[alt="lausive-logo-01"]
+            {
+                height: 65px !important;
+            }
         }
 
         .navbar-brand-description
         {
             display: flex;
-            margin-top: 27px;
+            margin-top: 26px;
             font-size: 0.9em;
             color: #aaaaaa;
         }
@@ -28,5 +33,15 @@
     nav
     {
         font-weight: 600;
+    }
+
+    a
+    {
+        transition: all .1s ease;
+    }
+
+    .nav .dropdown .dropdown-toggle:focus
+    {
+        color: $brand-info;
     }
 }

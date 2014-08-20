@@ -1,5 +1,36 @@
 .cart-container
 {
+
+    margin-left: 100px;
+
+    .menu-cart
+    {
+        a
+        {
+            position: relative;
+            padding-right: 0;
+
+            &:before
+            {
+                font-family: 'Glyphicons Halflings';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                content: '\e033';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: -30px;
+                width: 33px;
+                height: 30px;
+                margin-top: -15px;
+                padding: 4px 0;
+                border-right: 1px solid $brand-primary;
+                color: $brand-info;
+            }
+        }
+    }
+
     @media all and (max-width: 767px)
     {
         position: absolute;
