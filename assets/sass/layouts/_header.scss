@@ -29,14 +29,4 @@
     {
         font-weight: 600;
     }
-
-    .cart-container
-    {
-        @media all and (max-width: 767px)
-        {
-            position: absolute;
-            top: 2px;
-            right: 100px;
-        }
-    }
 }
