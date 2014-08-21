@@ -6,17 +6,47 @@
     {
         .entry-title
         {
+            font-size: $font-size-h4;
+            color: $brand-info;
+            margin-top: 35px;
+            margin-bottom: 10px;
+
             a
             {
                 font-size: $font-size-h4;
             }
         }
+
+        .byline
+        {
+            color: $brand-primary;
+            font-weight: $headings-font-weight;
+            margin-bottom: 20px;
+
+            .fn
+            {
+                color: $brand-primary;
+                text-decoration: none;
+
+                &:hover
+                {
+                    color: $brand-info;
+                }
+            }
+        }
+    }
+
+    .entry-content
+    {
+        margin-bottom: 50px;
+    }
+
+    .entry-summary
+    {
+        margin-bottom: 50px;
     }
 }
 
 
 
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
 .hentry footer { }
