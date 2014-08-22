@@ -13,13 +13,13 @@
   ?>
 
   <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-top-1' ) ) : ?>
-      <section class="jumbotron sidebar-full sidebar-top sidebar-home">
+      <section class="jumbotron sidebar-full sidebar-top sidebar-home sidebar-home-first">
         <?php dynamic_sidebar('sidebar-home-top-1'); ?>
       </section>
   <?php endif; ?>
 
   <?php if ( is_front_page() && is_active_sidebar( 'sidebar-home-top-2' ) ) : ?>
-      <section class="jumbotron sidebar-full sidebar-top sidebar-top-2 sidebar-home">
+      <section class="jumbotron sidebar-full sidebar-top sidebar-home">
         <div class="container">
             <?php dynamic_sidebar('sidebar-home-top-2'); ?>
         </div>

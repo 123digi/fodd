@@ -219,7 +219,6 @@
     &.sidebar-home
     {
         background-color: #ffffff;
-        padding: 0;
         text-align: center;
 
         .widget
@@ -230,21 +229,17 @@
             h4,
             h5,
             h6,
-            p
+            p,
+            ul
             {
                 color: $brand-info;
             }
         }
 
-        &.sidebar-top-2
+        &.sidebar-home-first
         {
-            margin-top: 80px;
-            padding: $jumbotron-padding;
-        }
-
-        &.sidebar-bottom
-        {
-            padding: $jumbotron-padding;
+            padding: 0;
+            margin-bottom: -70px;
         }
     }
 }
