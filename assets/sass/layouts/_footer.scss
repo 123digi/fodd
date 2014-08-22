@@ -1,1 +1,23 @@
-.content-info { }
+.content-info
+{
+    background-color: $gray-darker;
+    margin-bottom: 0;
+
+    .footer-column
+    {
+        p
+        {
+            font-size: $font-size-base;
+        }
+
+        .widget
+        {
+            .widget-title
+            {
+                font-size: $font-size-large;
+                color: $brand-info;
+                margin-top: 0;
+            }
+        }
+    }
+}

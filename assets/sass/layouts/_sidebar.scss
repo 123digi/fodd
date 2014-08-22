@@ -8,6 +8,11 @@
         padding: 30px 15px;
         margin-bottom: 30px;
 
+        &:last-child
+        {
+            margin-bottom: 80px;
+        }
+
         h3
         {
             font-size: $font-size-base;
@@ -129,12 +134,9 @@
 {
     .widget
     {
-        &:first-child
+        .widget-title
         {
-            h3
-            {
-                margin-top: 0;
-            }
+            margin-top: 0;
         }
 
         h1,
@@ -213,7 +215,7 @@
 
     &.sidebar-bottom
     {
-
+        margin-bottom: 0;
     }
 
     &.sidebar-home
