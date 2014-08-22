@@ -6,7 +6,56 @@
 
 function pith_widgets_init() {
 
-// Sidebars
+// Sidebar
+
+  register_sidebar(array(
+    'name'          => __('Sidebar', 'roots'),
+    'id'            => 'sidebar-primary',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+// Footer
+
+  register_sidebar(array(
+    'name'          => __('Footer column one', 'roots'),
+    'id'            => 'sidebar-footer-one',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Footer column two', 'roots'),
+    'id'            => 'sidebar-footer-two',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Footer column three', 'roots'),
+    'id'            => 'sidebar-footer-three',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Footer column four', 'roots'),
+    'id'            => 'sidebar-footer-four',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+// Widget zones
 
   register_sidebar(array(
     'name'          => __('Home Top 1', 'roots'),
