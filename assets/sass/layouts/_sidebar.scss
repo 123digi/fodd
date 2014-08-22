@@ -127,95 +127,124 @@
 
 .sidebar-full
 {
-    &.sidebar-full
+    .widget
     {
-        .widget
+        &:first-child
         {
-            &:first-child
+            h3
             {
-                h3
+                margin-top: 0;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+        {
+            color: #ffffff;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding: 0;
+
+            li
+            {
+                display: inline-block;
+
+                &:after
                 {
-                    margin-top: 0;
+                    content: ',';
                 }
-            }
 
-            h1,
-            h2,
-            h3,
-            h4,
-            h5,
-            h6
-            {
-                color: #ffffff;
-            }
-
-            ul
-            {
-                list-style: none;
-                padding: 0;
-
-                li
+                &:last-child
                 {
-                    display: inline-block;
-
                     &:after
                     {
-                        content: ',';
-                    }
-
-                    &:last-child
-                    {
-                        &:after
-                        {
-                            content: '';
-                        }
+                        content: '';
                     }
                 }
             }
+        }
 
-            a
-            {
-                color: $brand-primary;
-            }
+        a
+        {
+            color: $brand-primary;
+        }
 
-            button
+        button
+        {
+            &.search-submit
             {
-                &.search-submit
+                background-color: $brand-primary;
+                border-color: $brand-primary;
+                color: #ffffff;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active,
                 {
-                    background-color: $brand-primary;
-                    border-color: $brand-primary;
-                    color: #ffffff;
-
-                    &:hover,
-                    &:focus,
-                    &:active,
-                    &.active,
-                    {
-                        background-color: transparent;
-                        color: $brand-primary;
-                        border-color: $brand-primary;
-                    }
-                }
-            }
-
-            .search-field.form-control
-            {
-                &:focus
-                {
+                    background-color: transparent;
+                    color: $brand-primary;
                     border-color: $brand-primary;
                 }
             }
         }
 
-        &.sidebar-top
+        .search-field.form-control
         {
-            margin-top: 70px;
-            margin-bottom: -80px;
-
-            &.sidebar-home
+            &:focus
             {
-                padding: 0;
+                border-color: $brand-primary;
             }
+        }
+    }
+
+    &.sidebar-top
+    {
+        margin-top: 70px;
+        margin-bottom: -80px;
+    }
+
+    &.sidebar-bottom
+    {
+
+    }
+
+    &.sidebar-home
+    {
+        background-color: #ffffff;
+        padding: 0;
+        text-align: center;
+
+        .widget
+        {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p
+            {
+                color: $brand-info;
+            }
+        }
+
+        &.sidebar-top-2
+        {
+            margin-top: 80px;
+            padding: $jumbotron-padding;
+        }
+
+        &.sidebar-bottom
+        {
+            padding: $jumbotron-padding;
         }
     }
 }

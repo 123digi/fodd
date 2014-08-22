@@ -9,8 +9,26 @@ function pith_widgets_init() {
 // Sidebars
 
   register_sidebar(array(
-    'name'          => __('Home Top', 'roots'),
-    'id'            => 'sidebar-home-top',
+    'name'          => __('Home Top 1', 'roots'),
+    'id'            => 'sidebar-home-top-1',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Home Top 2', 'roots'),
+    'id'            => 'sidebar-home-top-2',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Home Bottom', 'roots'),
+    'id'            => 'sidebar-home-bottom',
     'before_widget' => '<section class="widget %1$s %2$s">',
     'after_widget'  => '</section>',
     'before_title'  => '<h3>',
