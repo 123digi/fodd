@@ -16,6 +16,7 @@
 @import "layouts/_posts";            // Post styling
 
 // Pith
-@import "components/thumbnail-grid";    // General/Store thumbnail styling
-@import "components/cart";              // Cart styling
-@import "components/carousel";          // Bootstrap carousel styling
+@import "components/_thumbnail-grid";    // General/Store thumbnail styling
+@import "components/_cart";              // Cart styling
+@import "components/_carousel";          // Bootstrap carousel styling
+@import "layouts/pages/_store";                // Store styling
