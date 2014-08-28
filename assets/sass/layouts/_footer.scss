@@ -2,22 +2,20 @@
 {
     background-color: $gray-darker;
     margin-bottom: 0;
+    padding-bottom: 15px;
 
-    .footer-column
+    p
     {
-        p
-        {
-            font-size: $font-size-base;
-        }
+        font-size: $font-size-base;
+    }
 
-        .widget
+    .widget
+    {
+        .widget-title
         {
-            .widget-title
-            {
-                font-size: $font-size-large;
-                color: $brand-info;
-                margin-top: 0;
-            }
+            font-size: $font-size-large;
+            color: $brand-info;
+            margin-top: 0;
         }
     }
 }

@@ -21,13 +21,12 @@ function roots_setup() {
   // http://codex.wordpress.org/Function_Reference/set_post_thumbnail_size
   // http://codex.wordpress.org/Function_Reference/add_image_size
   add_theme_support('post-thumbnails');
-  add_image_size('store-product-thumb', 260, 245, true);
-  add_image_size('post-custom-thumbnail', 1200, 500, true);
-  add_image_size('post-custom-sidebar-thumbnail', 850, 500, true);
+  add_image_size('post-custom-thumbnail', 1020, 600, true);
+  add_image_size('store-product-custom-thumbnail', 520, 490, true);
 
   // Add post formats
   // http://codex.wordpress.org/Post_Formats
-  add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
+  //  add_theme_support('post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'video', 'audio'));
 
   // Tell the TinyMCE editor to use a custom stylesheet
   add_editor_style('/assets/css/editor-style.css');

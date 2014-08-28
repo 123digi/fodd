@@ -41,7 +41,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 a {
-  background: transparent;
+  background: red;
 }
 a:focus {
   outline: thin dotted;

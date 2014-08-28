@@ -2,9 +2,7 @@
   <article <?php post_class(); ?>>
      <?php if ( has_post_thumbnail() ) { ?>
       <figure>
-          <a href="<?php the_permalink(); ?>">
-              <?php the_post_thumbnail( 'post-custom-sidebar-thumbnail', array('class' => 'img-responsive') ); ?>
-          </a>
+        <?php the_post_thumbnail( 'post-custom-thumbnail', array('class' => 'img-responsive') ); ?>
       </figure>
     <?php } ?>
     <header>
@@ -14,9 +12,6 @@
     <div class="entry-content">
       <?php the_content(); ?>
     </div>
-    <footer>
-
-    </footer>
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>

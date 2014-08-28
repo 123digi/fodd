@@ -1,0 +1,40 @@
+.closing
+{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: $gray-darker;
+    margin-bottom: 0;
+
+    p
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        float: left;
+
+        &.fik-stores-badge
+        {
+            float: right;
+            font-family: 'helvetica', 'arial';
+            font-size: 12px;
+            font-weight: 100;
+            position: relative;
+            padding-right: 87px;
+
+            &>a
+            {
+                display: inline-block;
+                position: absolute;
+                right: 0;
+                top: -3px;
+
+                &>img
+                {
+                    height: 21px;
+                    width: 82px;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+}

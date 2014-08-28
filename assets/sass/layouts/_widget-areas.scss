@@ -1,0 +1,115 @@
+.widget-area-full
+{
+    .widget
+    {
+        .widget-title
+        {
+            margin-top: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6
+        {
+            color: #ffffff;
+        }
+
+        ul
+        {
+            list-style: none;
+            padding: 0;
+
+            li
+            {
+                display: inline-block;
+
+                &:after
+                {
+                    content: ',';
+                }
+
+                &:last-child
+                {
+                    &:after
+                    {
+                        content: '';
+                    }
+                }
+            }
+        }
+
+        a
+        {
+            color: $brand-primary;
+        }
+
+        button
+        {
+            &.search-submit
+            {
+                background-color: $brand-primary;
+                border-color: $brand-primary;
+                color: #ffffff;
+
+                &:hover,
+                &:focus,
+                &:active,
+                &.active,
+                {
+                    background-color: transparent;
+                    color: $brand-primary;
+                    border-color: $brand-primary;
+                }
+            }
+        }
+
+        .search-field.form-control
+        {
+            &:focus
+            {
+                border-color: $brand-primary;
+            }
+        }
+    }
+
+    &.widget-area-top
+    {
+        margin-top: 70px;
+        margin-bottom: -80px;
+    }
+
+    &.widget-area-bottom
+    {
+        margin-bottom: 0;
+    }
+
+    &.widget-area-home
+    {
+        background-color: #ffffff;
+        text-align: center;
+
+        .widget
+        {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            p,
+            ul
+            {
+                color: $brand-info;
+            }
+        }
+
+        &.widget-area-home-first
+        {
+            padding: 0;
+            margin-bottom: -70px;
+        }
+    }
+}
