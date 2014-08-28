@@ -51,10 +51,10 @@
                 &>a
                 {
                     display: inline-block;
-                    width: 130px;
+                    width: 70%;
                     color: $brand-primary;
 
-                    @media all and (max-width: $screen-md-max)
+                    @media all and (min-width: $screen-xs-max) and (max-width: $screen-md-max)
                     {
                         width: 100%;
                     }
@@ -78,10 +78,13 @@
                         }
                     }
 
-//                    @media all and (max-width: $screen-md-max)
-//                    {
-//                        float: none;
-//                    }
+                    @media all and (min-width: $screen-xs-max) and (max-width: $screen-md-max)
+                    {
+                        position: relative;
+                        display: inline-block;
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+                    }
                 }
             }
 

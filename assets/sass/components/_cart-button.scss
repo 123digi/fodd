@@ -1,7 +1,7 @@
 .cart-container
 {
 
-    margin-left: 120px;
+    margin-left: 40px;
 
     .menu-cart
     {
@@ -31,7 +31,7 @@
         }
     }
 
-    @media all and (max-width: 767px)
+    @media all and (max-width: $screen-xs-max)
     {
         position: absolute;
         top: 2px;

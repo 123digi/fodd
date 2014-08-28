@@ -1,7 +1,5 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
-<?php echo do_shortcode('[gallery ids="59,57,53,54,56"]'); ?>
-
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'roots'); ?>
