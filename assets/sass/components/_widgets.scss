@@ -1,7 +1,13 @@
 .widget_calendar
 {
-    td
+    thead,
+    tbody
     {
-        padding: 3px;
+        th,
+        td
+        {
+            padding: 3px;
+            text-align: center;
+        }
     }
 }
