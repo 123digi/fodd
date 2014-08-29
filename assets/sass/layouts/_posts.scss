@@ -1,3 +1,4 @@
+// General & archive blog
 .hentry
 {
     margin-bottom: 30px;
@@ -47,6 +48,11 @@
     }
 }
 
+// Single post
+.single-post
+{
+    .hentry
+    {
 
-
-.hentry footer { }
+    }
+}
