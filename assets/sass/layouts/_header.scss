@@ -22,6 +22,11 @@
             margin-top: 26px;
             font-size: 0.9em;
             color: #aaaaaa;
+
+            @media all and (max-width:$screen-xs-max)
+            {
+                display: none;
+            }
         }
     }
 
