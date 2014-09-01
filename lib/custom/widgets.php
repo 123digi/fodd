@@ -102,86 +102,23 @@ function pith_widgets_init() {
     'after_title'   => '</h3>',
   ));
 
-//
-//  register_sidebar(array(
-//    'name'          => __('Store Top', 'roots'),
-//    'id'            => 'sidebar-store-top',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Product Top', 'roots'),
-//    'id'            => 'sidebar-product-top',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Store Bottom', 'roots'),
-//    'id'            => 'sidebar-store-bottom',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Product Bottom', 'roots'),
-//    'id'            => 'sidebar-product-bottom',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Store Main', 'roots'),
-//    'id'            => 'sidebar-store-main',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Product Main', 'roots'),
-//    'id'            => 'sidebar-product-main',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Blog Main', 'roots'),
-//    'id'            => 'sidebar-blog-main',
-//    'before_widget' => '<section class="widget col-xs-12 %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Blog Post', 'roots'),
-//    'id'            => 'sidebar-blog-post',
-//    'before_widget' => '<section class="widget col-xs-12 %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
-//
-//  register_sidebar(array(
-//    'name'          => __('Primary Bottom', 'roots'),
-//    'id'            => 'sidebar-primary-bottom',
-//    'before_widget' => '<section class="widget %1$s %2$s">',
-//    'after_widget'  => '</section>',
-//    'before_title'  => '<h3>',
-//    'after_title'   => '</h3>',
-//  ));
+  register_sidebar(array(
+    'name'          => __('Post bottom', 'roots'),
+    'id'            => 'widget-area-post-bottom',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ));
+
+  register_sidebar(array(
+    'name'          => __('Product bottom', 'roots'),
+    'id'            => 'widget-area-product-bottom',
+    'before_widget' => '<section class="widget %1$s %2$s">',
+    'after_widget'  => '</section>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ));
+
 }
 add_action('widgets_init', 'pith_widgets_init');

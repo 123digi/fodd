@@ -12,6 +12,11 @@
     <div class="entry-content">
       <?php the_content(); ?>
     </div>
+    <?php if ( is_active_sidebar( 'widget-area-post-bottom' ) ) : ?>
+      <footer class="widget-area-post">
+        <?php dynamic_sidebar('widget-area-post-bottom'); ?>
+      </footer>
+    <?php endif; ?>
     <?php comments_template('/templates/comments.php'); ?>
   </article>
 <?php endwhile; ?>
