@@ -2,11 +2,15 @@
 {
     &>.table
     {
+        margin-bottom: 0;
+
         thead
         {
             th
             {
-                text-transform: uppercase;
+                color: $brand-info;
+                padding-top: 0;
+                padding-bottom: 20px;
             }
         }
 
@@ -16,6 +20,9 @@
             {
                 td
                 {
+                    padding-top: 30px;
+                    padding-bottom: 30px;
+
                     &.cart_image
                     {
                         img
@@ -28,6 +35,35 @@
                     .cart_item_update
                     {
                         margin-left: 20px;
+                        vertical-align: top;
+                    }
+
+                    .input-mini
+                    {
+                        border: 1px solid $brand-info;
+                        background-color: transparent;
+                        padding: $padding-base-vertical $padding-base-horizontal;
+
+                        &:focus,
+                        &:active
+                        {
+                            outline: none;
+                        }
+                    }
+
+                    &:last-child
+                    {
+                        width: 210px;
+
+                        @media all and (max-width: $screen-sm-max)
+                        {
+                            width: 90px;
+                        }
+                    }
+
+                    &:nth-child(4)
+                    {
+                        padding-right: 43px;
                     }
                 }
             }
@@ -35,10 +71,61 @@
 
         tfoot
         {
+
             td
             {
-                text-transform: uppercase;
+                position: relative;
                 text-align: right;
+                padding-top: 30px;
+                padding-bottom: 0;
+
+                .subtotal-custom
+                {
+                    background-color: #ffffff;
+                    padding: 11px $padding-large-horizontal;
+                    display: inline-block;
+
+                    @media all and (min-width: $screen-xs-max) and (max-width: $screen-sm-max)
+                    {
+                        width: 100%;
+                    }
+                }
+
+                &:first-child
+                {
+                    padding-right: 0;
+
+                    @media all and (min-width: $screen-xs-max) and (max-width: $screen-sm-max)
+                    {
+                        display: block;
+                        position: absolute;
+                        padding-top: 0;
+                        border: none;
+                        width: 480px;
+                        left: 15px;
+                        text-align: left;
+                    }
+                }
+
+                &:nth-child(2)
+                {
+                    padding-left: 0;
+
+                    .subtotal-custom
+                    {
+                        width: 100%;
+                        padding-right: 35px;
+                    }
+
+                    @media all and (min-width: $screen-xs-max) and (max-width: $screen-sm-max)
+                    {
+                        display: block;
+                        position: absolute;
+                        padding-top: 0;
+                        border: none;
+                        right: 225px;
+                    }
+                }
             }
         }
 
@@ -83,72 +170,81 @@
 
             tbody
             {
-                td
+                .cart_item_row
                 {
-                    position: relative;
-                    padding-left: 50%;
-
-                    &:before
+                    td
                     {
-                        position: absolute;
-                        content: '';
-                        top: 8px;
-                        left: 0;
-                        width: 45%;
-                        padding-right: 10px;
-                        padding-left: 8px;
-                        white-space: nowrap;
-                        text-align: left;
-                    }
-
-                    &:first-child
-                    {
+                        position: relative;
+                        padding-left: 50%;
                         padding-top: 8px;
-                        padding-left: 8px;
-                        padding-right: 55%;
-                    }
-
-                    &:nth-of-type(2)
-                    {
-                        position: absolute;
-                        top: 0;
-                        border: none;
-                        background-color: transparent;
-                    }
-
-                    &:nth-of-type(3)
-                    {
-                        border: none;
+                        padding-bottom: 8px;
 
                         &:before
                         {
-                            top: 14px;
-                            content: 'Cantidad';
+                            position: absolute;
+                            content: '';
+                            top: 8px;
+                            left: 0;
+                            width: 45%;
+                            padding-right: 10px;
+                            padding-left: 8px;
+                            white-space: nowrap;
+                            text-align: left;
                         }
 
-                        form
+                        &:first-child
                         {
-                            text-align: right;
+                            padding-top: 25px;
+                            padding-left: 8px;
+                            padding-right: 55%;
                         }
-                    }
 
-                    &:nth-of-type(4)
-                    {
-                        border: none;
-
-                        &:before
+                        &:nth-of-type(2)
                         {
-                            content: 'Precio unitario';
+                            position: absolute;
+                            padding-top: 25px;
+                            top: 0;
+                            border: none;
+                            background-color: transparent;
                         }
-                    }
 
-                    &:last-child
-                    {
-                        border: none;
-
-                        &:before
+                        &:nth-of-type(3)
                         {
-                            content: 'Subtotal';
+                            border: none;
+
+                            &:before
+                            {
+                                top: 14px;
+                                content: 'Cantidad';
+                            }
+
+                            form
+                            {
+                                text-align: right;
+                            }
+                        }
+
+                        &:nth-of-type(4)
+                        {
+                            border: none;
+                            padding-right: 8px;
+
+                            &:before
+                            {
+                                content: 'Precio unitario';
+                            }
+                        }
+
+                        &:last-child
+                        {
+                            border: none;
+                            width: inherit;
+                            padding-bottom: 25px;
+
+                            &:before
+                            {
+                                content: 'Subtotal';
+                            }
                         }
                     }
                 }
@@ -164,9 +260,49 @@
                     &:first-child
                     {
                         text-align: left;
+
+                        .subtotal-custom
+                        {
+                            width: 100%;
+                        }
+                    }
+
+                    &:last-child
+                    {
+                        display: none;
                     }
                 }
             }
+        }
+    }
+
+    .fik_to_checkout
+    {
+        padding-right: 8px;
+        text-align: right;
+        margin-top: -41px;
+
+        &>.button
+        {
+            padding: $padding-large-vertical $padding-large-horizontal;
+            width: 210px;
+
+            @media all and (max-width: $screen-xs-max)
+            {
+                width: 100%;
+            }
+        }
+
+        @media all and (min-width: $screen-xs-max) and (max-width: $screen-sm-max)
+        {
+            margin-top: -31px;
+        }
+
+        @media all and (max-width: $screen-xs-max)
+        {
+            margin-top: 0;
+            text-align: center;
+            padding-left: 8px;
         }
     }
 }

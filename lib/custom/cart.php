@@ -8,7 +8,7 @@ add_filter('cart_format', 'customize_cart');
 
 function customize_cart($format){
 
-    $format['before_cart'] = '<table class="table table-striped">';
+    $format['before_cart'] = '<table class="table">';
     $format['after_cart'] = '</table>';
     $format['before_header_row'] = '<tr>';
     $format['after_header_row'] = '</tr>';
@@ -24,10 +24,10 @@ function customize_cart($format){
     $format['after_body'] = '</tbody>';
     $format['before_total'] = '<tfoot><tr class="fik-cart-subtotal-row">';
     $format['after_total'] = '</tr></tfoot>';
-    $format['before_total_title'] = '<td colspan="4"><strong>';
-    $format['after_total_title'] = '</strong></td>';
-    $format['before_total_element'] = '<td><strong>';
-    $format['after_total_element'] = '</strong></td>';
+    $format['before_total_title'] = '<td colspan="3"><span class="subtotal-custom"><strong>';
+    $format['after_total_title'] = '</strong></span></td>';
+    $format['before_total_element'] = '<td><span class="subtotal-custom"><strong>';
+    $format['after_total_element'] = '</strong></span></td><td></td>';
     $format['cart_image_element'] = '<td class="cart_image"><a href="%s"><img src="%s" alt="%s"></a></td>';
     $format['product_name_element'] = '<td><a href="%s">%s</a><br/>%s</td>';
     $format['quantity_form'] = '<td><form action="" method="post"><input type="hidden" name="cart_item_%s" value="%s" class="nueva_clase"><input type="number" name="cart_item_%s_quantity" min="0" max="10" step="1" value="%s" placeholder="%s" class="input-mini" required=""><button type="submit" class="cart_item_update btn btn-small btn-primary" name="update_quantity">%s</button></form></td>';
