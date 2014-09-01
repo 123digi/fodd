@@ -28,6 +28,25 @@
                 display: none;
             }
         }
+
+        .navbar-toggle
+        {
+            border: none;
+
+            &:hover,
+            &:focus,
+            &:active
+            {
+                background-color: transparent;
+            }
+
+            .icon-bar
+            {
+                background-color: $brand-info;
+                height: 3px;
+
+            }
+        }
     }
 
     .navbar-collapse
