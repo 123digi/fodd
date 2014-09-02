@@ -7,7 +7,37 @@
         {
             padding-bottom: 30px;
             border-bottom: 1px solid $gray-custom-dark;
+            margin-bottom: 20px;
+        }
+
+        .widget-area-post
+        {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $gray-custom-dark;
             margin-bottom: 30px;
+
+            .widget_fik_social_widget
+            {
+                position: relative;
+
+                .widget-title
+                {
+                    display: inline-block;
+                    margin: 0;
+                    color: $gray-custom-darker;
+                    font-size: $font-size-base;
+                    text-transform: uppercase;
+                    font-weight: $headings-font-weight;
+                }
+
+                .fik-share
+                {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    display: inline-block;
+                }
+            }
         }
     }
 }

@@ -17,6 +17,29 @@
     .fik-share-item
     {
         padding: 0 7px;
+
+        a
+        {
+            transition: color 0.1s ease;
+            &:hover
+            {
+                color: $gray-custom-darker;
+            }
+        }
+    }
+}
+
+.wp_social_networks_widget
+{
+    .social-networks
+    {
+        a
+        {
+            &:hover
+            {
+                color: $gray-custom-darker;
+            }
+        }
     }
 }
 
