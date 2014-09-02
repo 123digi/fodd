@@ -31,7 +31,10 @@
                         <?php the_fik_add_to_cart_button(); ?>
                     </div>
                     <div class="product-description col-xs-12">
-                        <?php the_content(); ?>
+                      <div class="aux">
+                          <h3 class="title-description">Info</h3>
+                          <?php the_content(); ?>
+                      </div>
                     </div>
                     <?php if ( is_active_sidebar( 'widget-area-product-description-bottom' ) ) : ?>
                       <footer class="widget-area-product-description-bottom col-xs-12">

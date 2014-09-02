@@ -9,6 +9,8 @@
             padding-top: 0;
             padding-bottom: 0;
             height: 70px;
+            display: inline-block;
+            float: none;
 
             img
             {
@@ -18,10 +20,11 @@
 
         .navbar-brand-description
         {
-            display: flex;
+            display: inline-block;
             margin-top: 26px;
             font-size: 0.9em;
             color: #aaaaaa;
+            float: none;
 
             @media all and (max-width:$screen-xs-max)
             {
