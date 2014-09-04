@@ -2,11 +2,11 @@
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
 node_modules
 assets/vendor/*
+assets/js/vendor/*
 assets/css/main.css.map
+assets/css/*main.css
+assets/js/*scripts.js
 assets/css/main.min.css.map
-assets/css/*main*.css
-assets/js/*scripts*.js
-assets/js/vendor/modernizr.min.js
 assets/manifest.json
 .sass-cache
 .DS_Store
