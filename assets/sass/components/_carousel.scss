@@ -61,11 +61,6 @@
                 margin-left: -$container-lg / 2;
             }
 
-            *
-            {
-                color: #ffffff;
-            }
-
             &>*
             {
                 max-width: 100%;
@@ -93,9 +88,27 @@
                 margin-bottom: $line-height-computed;
             }
 
-            p
+            .btn
             {
+                &.btn-info
+                {
+                    &:hover
+                    {
+                        background-color: #ffffff;
+                        color: $brand-info;
+                        border-color: #ffffff;
+                    }
+                }
 
+                &.btn-primary
+                {
+                    &:hover
+                    {
+                        background-color: #ffffff;
+                        color: $brand-primary;
+                        border-color: #ffffff;
+                    }
+                }
             }
         }
     }
