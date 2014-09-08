@@ -36,11 +36,66 @@
 
         .carousel-caption
         {
-            bottom: 10px;
+            width: 100%;
+            left: 50%;
+            text-align: left;
+            top: 10%;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            @media all and (min-width: $screen-sm-min)
+            {
+                width: $container-sm;
+                margin-left: -$container-sm / 2;
+            }
+
+            @media all and (min-width: $screen-md-min)
+            {
+                width: $container-md;
+                margin-left: -$container-md / 2;
+            }
+
+            @media all and (min-width: $screen-lg-min)
+            {
+                width: $container-lg;
+                margin-left: -$container-lg / 2;
+            }
 
             *
             {
                 color: #ffffff;
+            }
+
+            &>*
+            {
+                max-width: 100%;
+
+                @media all and (min-width: $screen-sm-min)
+                {
+                    max-width: 60%;
+                }
+
+                @media all and (min-width: $screen-md-min)
+                {
+                    max-width: 40%;
+                }
+
+                @media all and (min-width: $screen-lg-min)
+                {
+                }
+            }
+
+            &>h4
+            {
+                font-size: $font-size-h1;
+                text-transform: uppercase;
+                margin-top: 0;
+                margin-bottom: $line-height-computed;
+            }
+
+            p
+            {
+
             }
         }
     }
