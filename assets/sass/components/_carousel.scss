@@ -37,28 +37,31 @@
         .carousel-caption
         {
             width: 100%;
-            left: 50%;
             text-align: left;
+            left: 0;
             top: 10%;
             padding-left: 15px;
             padding-right: 15px;
 
             @media all and (min-width: $screen-sm-min)
             {
-                width: $container-sm;
-                margin-left: -$container-sm / 2;
+                left: 50%;
+                width: $container-sm - 100px;
+                margin-left: ( -$container-sm + 100px ) / 2;
             }
 
             @media all and (min-width: $screen-md-min)
             {
-                width: $container-md;
-                margin-left: -$container-md / 2;
+                left: 50%;
+                width: $container-md - 100px;
+                margin-left: ( -$container-md + 100px ) / 2;
             }
 
             @media all and (min-width: $screen-lg-min)
             {
+                left: 50%;
                 width: $container-lg;
-                margin-left: -$container-lg / 2;
+                margin-left: ( -$container-lg + 100px ) / 2;
             }
 
             &>*
