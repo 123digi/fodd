@@ -173,7 +173,7 @@ add_shortcode('fikbutton', 'pith_buttons');
 // ------------- Slider shortcode
 // -------------
 
-function fik_new_slider($atts) {
+function pith_slider($atts) {
     global $wp_query;
     if (isset($atts['ids'])) {
         $ids = explode(',', $atts['ids']);
@@ -287,4 +287,4 @@ if ( shortcode_exists('fikslider')){
     remove_shortcode('fikslider');
 }
 
-add_shortcode('fikslider', 'fik_new_slider');
+add_shortcode('fikslider', 'pith_slider');
