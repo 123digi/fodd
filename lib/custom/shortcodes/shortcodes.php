@@ -183,31 +183,27 @@ function pith_products_grid($atts) {
     $temp_query = $wp_query;
     query_posts($args);
     if ($wp_query->have_posts()) {
-        ?>
-        <section class="row">
-            <?php
-                /* Start the Loop */
-                $i = 0;
-                while (have_posts() && $i < $quantity) : the_post();
+        $product_grid = '<section class="row">';
+        /* Start the Loop */
+        $i = 0;
+        while (have_posts() && $i < $quantity) : the_post();
+            /* Include the post format-specific template for the content. If you want to
+             * this in a child theme then include a file called called content-___.php
+             * (where ___ is the post format) and that will be used instead.
+             */
+            if ($columns == 4){
+                $product_grid .= load_template_part('templates/content-fik_product-cols-4');
+            }else{
+                $product_grid .= load_template_part('templates/content-fik_product-cols-3');
+            }
+            $i++;
 
-                    /* Include the post format-specific template for the content. If you want to
-                     * this in a child theme then include a file called called content-___.php
-                     * (where ___ is the post format) and that will be used instead.
-                     */
-                    if ($columns == 4){
-                        get_template_part('templates/content-fik_product-cols-4');
-                    }else{
-                        get_template_part('templates/content-fik_product-cols-3');
-                    }
+        endwhile;
 
-                $i++;
-                endwhile;
-            ?>
-        </section>
-        <?php
+        $product_grid .= '</section>';
     }
     $wp_query = $temp_query;
-
+    return $product_grid;
 }
 
 if ( shortcode_exists('fik_products')){
@@ -230,7 +226,7 @@ function pith_latest_posts($atts) {
     extract(shortcode_atts($args, $atts));
 
     $q = new WP_Query(
-        array('orderby' => $order_by, 'order' => $order, 'posts_per_page' => $number_of_colums, 'category_name' => $category)
+        array('quantity' => $quantity)
     );
 
     $html = "";
@@ -269,6 +265,23 @@ add_shortcode('fik_latest_posts', 'pith_latest_posts');
 
 
 // -------------
+// ------------- Special titles shortcode
+// -------------
+
+function pith_special_title($atts, $content = null) {
+
+    return "<h5><span class='fik-special-title'>" . $content . "</span><h5>";
+
+}
+
+if ( shortcode_exists('fik_special_title')){
+    remove_shortcode('fik_special_title');
+}
+
+add_shortcode('fik_special_title', 'pith_special_title');
+
+
+// -------------
 // ------------- Buttons shortcode
 // -------------
 
@@ -303,15 +316,13 @@ function pith_buttons($atts) {
     $temp_query = $wp_query;
 
     if ( $link != '' ) {
-        ?>
-            <a type="button" class="btn btn-<?php echo($color); ?>" href="<?php echo($link); ?>"><?php echo($text); ?></a>
-        <?php
+            $button = '<a type="button" class="btn btn-' . $color . '" href="' . $link . '">' . $text . '</a>';
     } else {
-        ?>
-            <button type="button" class="btn btn-<?php echo($color); ?>"><?php echo($text); ?></button>
-        <?php
+            $button = '<button type="button" class="btn btn-' . $color . '">' . $text. '</button>';
     }
     $wp_query = $temp_query;
+
+    return $button;
 
 }
 
