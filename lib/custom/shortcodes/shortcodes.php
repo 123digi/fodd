@@ -65,7 +65,7 @@ add_shortcode('fik_row', 'pith_bootstrap_row');
 
 function pith_bootstrap_col_1_2($atts, $content = null) {
 
-    return "<div class='col-sm-6'>" . $content . "</div>";
+    return "<div class='col-sm-6'>" . do_shortcode($content) . "</div>";
 
 }
 
@@ -82,7 +82,7 @@ add_shortcode('fik_col_1-2', 'pith_bootstrap_col_1_2');
 
 function pith_bootstrap_col_1_3($atts, $content = null) {
 
-    return "<div class='col-sm-4'>" . $content . "</div>";
+    return "<div class='col-sm-4'>" . do_shortcode($content) . "</div>";
 
 }
 
@@ -99,7 +99,7 @@ add_shortcode('fik_col_1-3', 'pith_bootstrap_col_1_3');
 
 function pith_bootstrap_col_1_4($atts, $content = null) {
 
-    return "<div class='col-sm-3'>" . $content . "</div>";
+    return "<div class='col-sm-3'>" . do_shortcode($content) . "</div>";
 
 }
 
@@ -116,7 +116,7 @@ add_shortcode('fik_col_1-4', 'pith_bootstrap_col_1_4');
 
 function pith_bootstrap_col_2_3($atts, $content = null) {
 
-    return "<div class='col-sm-8'>" . $content . "</div>";
+    return "<div class='col-sm-8'>" . do_shortcode($content) . "</div>";
 
 }
 
@@ -133,7 +133,7 @@ add_shortcode('fik_col_2-3', 'pith_bootstrap_col_2_3');
 
 function pith_bootstrap_col_3_4($atts, $content = null) {
 
-    return "<div class='col-sm-9'>" . $content . "</div>";
+    return "<div class='col-sm-9'>" . do_shortcode($content) . "</div>";
 
 }
 
@@ -180,6 +180,8 @@ function pith_products_grid($atts) {
         );
     }
 
+    $product_grid = '';
+
     $temp_query = $wp_query;
     query_posts($args);
     if ($wp_query->have_posts()) {
@@ -220,35 +222,34 @@ add_shortcode('fik_products', 'pith_products_grid');
 function pith_latest_posts($atts) {
 
     $args = array(
-        "quantity"       => "2"
+        "quantity"       => "2",
+        "category_name"       => ""
     );
 
     extract(shortcode_atts($args, $atts));
 
     $q = new WP_Query(
-        array('quantity' => $quantity)
+        array('posts_per_page' => $quantity, 'category_name' => $category_name)
     );
 
     $html = "";
-    $html .= "<section class='row latests-posts'>";
+    $html .= "<section class='row latest-posts'>";
 
-    $i = 0;
-    while ($q->have_posts() && $i < $quantity) : $q->the_post();
+    while ($q->have_posts()) : $q->the_post();
 
         $html .= '<article class="col-sm-6">';
-        $html .= '<figure class="featured-image">';
+        $html .= '<figure class="featured-image thumbnail">';
         $html .= '<a href="'.get_permalink().'">';
         $html .= get_the_post_thumbnail(get_the_ID(), 'latest-post-custom-thumbnail');
-        $html .= '</a></figure>';
-        $html .= '<header>';
+        $html .= '</a>';
+        $html .= '<figcaption><header>';
         $html .= '<h5 class="entry-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5>';
         $html .= '</header>';
         $html .= '<footer>';
         $html .= '<time class="published" datetime="'.get_the_time('c').'">'.get_the_date().'</time>';
-        $html .= '<p class="byline author vcard">By <a href="'.get_author_posts_url(get_the_author_meta(ID)).'" rel="author" class="fn">'.get_the_author().'</a></p>';
-        $html .= '</footer>';
+        $html .= '<p class="byline author vcard">By <a href="'.get_author_posts_url(get_the_author_meta('ID')).'" rel="author" class="fn">'.get_the_author().'</a></p>';
+        $html .= '</footer></figcaption></figure>';
         $html .= '</article>';
-        $i++;
 
     endwhile;
     wp_reset_query();
@@ -270,7 +271,7 @@ add_shortcode('fik_latest_posts', 'pith_latest_posts');
 
 function pith_special_title($atts, $content = null) {
 
-    return "<h5><span class='fik-special-title'>" . $content . "</span><h5>";
+    return "<h5 class='fik-special-title'>" . $content . "</h5>";
 
 }
 
@@ -339,6 +340,7 @@ add_shortcode('fik_button', 'pith_buttons');
 
 function pith_slider($atts) {
     global $wp_query;
+    $slider = '';
     if (isset($atts['ids'])) {
         $ids = explode(',', $atts['ids']);
         if (is_array($ids)) {
@@ -386,64 +388,57 @@ function pith_slider($atts) {
                     wp_enqueue_style('bootstrap-carousel', '/wp-content/mu-plugins/assets/css/fik-bootstrap-carousel.css');
                 }
                 $maxwidth = ' style="max-width:' . $atts['max-width'] . ';"';
-                echo('<div id="' . $atts['id'] . '" class="carousel slide"' . $maxwidth . '>');
+                $slider = '<div id="' . $atts['id'] . '" class="carousel slide"' . $maxwidth . '>';
                 // Carousel Indicators
                 if ((isset($atts['indicators'])) && ($atts['indicators'] == 'true')) {
-                    echo('<ol class="carousel-indicators">');
+                    $slider .= '<ol class="carousel-indicators">';
                     foreach ($slides as $key => $slide) {
                         if ($key == 0) {
                             $class = ' class="active"';
                         } else {
                             $class = '';
                         }
-                        echo('<li data-target="#' . $atts['id'] . '" data-slide-to="' . $key . '"' . $class . '></li>');
+                        $slider .= '<li data-target="#' . $atts['id'] . '" data-slide-to="' . $key . '"' . $class . '></li>';
                     }
-                    echo('</ol>');
+                    $slider .= '</ol>';
                 }
                 // Carousel Items
-                echo ('<div class="carousel-inner">');
+                $slider .= '<div class="carousel-inner">';
                 foreach ($slides as $key => $slide) {
                     if ($key == 0) {
                         $class = ' class="active item"';
                     } else {
                         $class = ' class="item"';
                     }
-                    echo('<div' . $class . '>');
+                   $slider .= '<div' . $class . '>';
                     // Image with or without link:
                     if (isset($slide['link'])) {
-                        echo('<a href="' . $slide['link'] . '" title="' . $slide['title'] . '">');
-                        echo($slide['img']);
-                        echo('</a>');
+                        $slider .= '<a href="' . $slide['link'] . '" title="' . $slide['title'] . '">';
+                        $slider .= $slide['img'];
+                        $slider .= '</a>';
                     } else {
-                        echo($slide['img']);
+                        $slider .= $slide['img'];
                     }
                     // Image caption if requested:
                     if ((isset($atts['captions'])) && ($atts['captions'] == 'true')) {
-                        echo('<div class="carousel-caption">');
-                        echo('<h4>' . $slide['title'] . '</h4>');
-                        echo('<p>' . $slide['description'] . '</p>');
-                        echo('</div>');
+                        $slider .= '<div class="carousel-caption">';
+                        $slider .= '<h4>' . $slide['title'] . '</h4>';
+                        $slider .= '<p>' . $slide['description'] . '</p>';
+                        $slider .= '</div>';
                     }
-                    echo('</div>'); // Closes each of the slides
+                    $slider .= '</div>'; // Closes each of the slides
                 }
-                echo('</div>'); // Closes carousel-inner
+                $slider .= '</div>'; // Closes carousel-inner
                 // Carousel Navigation
                 if ((isset($atts['navigation'])) && ($atts['navigation'] == 'true')) {
-                    echo('<a class="carousel-control left" href="#' . $atts['id'] . '" data-slide="prev"><span>&lsaquo;</span></a>');
-                    echo('<a class="carousel-control right" href="#' . $atts['id'] . '" data-slide="next"><span>&rsaquo;</span></a>');
+                    $slider .= '<a class="carousel-control left" href="#' . $atts['id'] . '" data-slide="prev"><span>&lsaquo;</span></a>';
+                    $slider .= '<a class="carousel-control right" href="#' . $atts['id'] . '" data-slide="next"><span>&rsaquo;</span></a>';
                 }
-                echo('</div>'); // Closes carousel
+                $slider .= '</div>'; // Closes carousel
             }
         }
 
-        if (isset($atts['width']))
-            $width = $atts['width']; else
-            $width = "100%";
-        if (isset($atts['height']))
-            $height = $atts['height']; else
-            $height = "100%";
-        ?>
-        <?php
+        return $slider;
     }
 }
 

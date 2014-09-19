@@ -3,6 +3,13 @@
 {
     .hentry
     {
+        margin-bottom: 0;
+
+        figure
+        {
+            margin-bottom: $line-height-computed;
+        }
+
         .entry-content
         {
             padding-bottom: 30px;

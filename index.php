@@ -12,10 +12,12 @@
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
-    <ul class="pager">
-      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
-      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
-    </ul>
+  <nav class="post-nav row">
+     <div class="col-sm-12">
+        <ul class="pager">
+            <li class="previous"><?php next_posts_link(__('<span class="arrow">&larr;</span> <span class="text">Older</span>', 'roots')); ?></li>
+            <li class="next"><?php previous_posts_link(__('<span class="text">Newer</span> <span class="arrow">&rarr;</span>', 'roots')); ?></li>
+        </ul>
+     </div>
   </nav>
 <?php endif; ?>
