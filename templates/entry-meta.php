@@ -4,5 +4,5 @@
     <time class="published" datetime="<?php echo get_the_time('c'); ?>"> <?php echo get_the_date(); ?></time>
 </p>
 <?php if ( get_comments_number() != 0 && is_archive()) : ?>
-    <small class="number-comments"><span class="fa fa-comments-o comments-icon"></span><?php printf(_n('1 comment', '%1$s comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></small>
+    <small class="number-comments"><span class="fa fa-comment<?php if (get_comments_number() > 1) : echo('s'); endif;?>-o comments-icon"></span><?php printf(_n('1 comment', '%1$s comments', get_comments_number(), 'roots'), number_format_i18n(get_comments_number()), get_the_title()); ?></small>
 <?php endif; ?>

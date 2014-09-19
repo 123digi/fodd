@@ -11,13 +11,13 @@
         border-bottom: 1px solid $gray-custom-dark;
         margin-bottom: 20px;
         margin-top: 60px;
-    }
 
-    .comments-icon
-    {
-        color: $gray-custom-dark;
-        font-size: 1.5em;
-        margin-right: 8px;
+        .comments-icon
+        {
+            color: $gray-custom-dark;
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
     }
 
     .media-body
@@ -41,7 +41,7 @@
             }
         }
 
-        time
+        .published
         {
             margin-bottom: 27px;
             margin-top: 5px;
