@@ -25,33 +25,49 @@
 
 .latest-posts
 {
-    figcaption
+
+    .thumbnail
     {
-        text-align: left;
-        position: relative;
+        border: none;
+        padding: 0;
 
-        .author
+        figcaption
         {
-            margin: 0;
-            color: $gray-light;
-        }
+            text-align: left;
+            position: relative;
 
-        .published
-        {
-            color: $gray-light;
-        }
-
-        .number-comments
-        {
-            position: absolute;
-            top: 0;
-            right: 0;
-            color: $gray-light;
-
-            .comments-icon
+            .entry-title
             {
-                margin-right: 4px;
-                color: $brand-info;
+                a
+                {
+                    color: $brand-primary;
+                }
+            }
+
+            .author
+            {
+                margin: 0;
+                color: $gray-light;
+            }
+
+            .published
+            {
+                color: $gray-light;
+            }
+
+            .number-comments
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: $gray-custom-darker;
+
+                .comments-icon
+                {
+                    margin-right: 4px;
+                    color: $gray-custom-darker;
+                    font-size: 1.2em;
+                }
             }
         }
     }

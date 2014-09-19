@@ -38,21 +38,13 @@
             }
         }
 
-        .published
-        {
-            color: $gray-light;
-        }
-
-        .author
-        {
-            color: $gray-light;
-        }
-
         .number-comments
         {
             position: absolute;
             right: 0;
             top: 0;
+            font-weight: $headings-font-weight;
+            color: $gray-custom-darker;
 
             .comments-icon
             {

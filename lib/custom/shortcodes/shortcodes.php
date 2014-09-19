@@ -246,8 +246,8 @@ function pith_latest_posts($atts) {
         $html .= '<h5 class="entry-title"><a href="'.get_the_permalink().'">'.get_the_title().'</a></h5>';
         $html .= '</header>';
         $html .= '<footer>';
-        $html .= '<time class="published" datetime="'.get_the_time('c').'">'.get_the_date().'</time>';
-        $html .= '<p class="byline author vcard">By <a href="'.get_author_posts_url(get_the_author_meta('ID')).'" rel="author" class="fn">'.get_the_author().'</a></p>';
+        $html .= '<p class="byline author vcard"><time class="published" datetime="'.get_the_time('c').'">'.get_the_date().'</time>';
+        $html .= ' by <a href="'.get_author_posts_url(get_the_author_meta('ID')).'" rel="author" class="fn">'.get_the_author().'</a></p>';
 
         if ( get_comments_number() != 0 ){
             $html .= '<small class="number-comments"><span class="fa fa-comment';
