@@ -3,7 +3,7 @@
 
     margin-left: 40px;
 
-    .menu-cart
+    .cart-menu
     {
         a
         {
@@ -15,7 +15,7 @@
                 font-family: 'Glyphicons Halflings';
                 font-style: normal;
                 font-weight: normal;
-                font-size: 18px;
+                font-size: 19px;
                 content: '\e033';
                 display: block;
                 position: absolute;
@@ -28,6 +28,17 @@
                 border-right: 1px solid $brand-primary;
                 color: $brand-info;
             }
+        }
+
+        .badge
+        {
+            position: absolute;
+            left: -32px;
+            top: 31px;
+            background-color: transparent;
+            font-size: 12px;
+            padding: 0;
+            width: 22px;
         }
     }
 
