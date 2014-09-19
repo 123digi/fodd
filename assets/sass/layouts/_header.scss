@@ -55,6 +55,33 @@
 
     .navbar-collapse
     {
+
+        .dropdown-menu
+        {
+            border: none;
+            padding: 0;
+
+            &>li
+            {
+                a
+                {
+                    padding-top: 7px;
+                    padding-bottom: 7px;
+                    border-bottom: 1px solid $gray-custom-light;
+                }
+
+                &:last-child
+                {
+                    a
+                    {
+                        border: none;
+                    }
+                }
+            }
+
+
+        }
+
         @media all and (max-width:$screen-xs-max)
         {
             width: 100%;
