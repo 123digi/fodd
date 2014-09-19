@@ -3,21 +3,29 @@
 .fik-special-title
 {
     margin: 0;
-    text-transform: uppercase;
     font-weight: $headings-font-weight;
     margin-bottom: 2 * $line-height-computed;
     position: relative;
+    text-align: center;
+    color: $gray-custom-darker;
 
-    &:after
+    &:before
     {
         content: '';
         position: absolute;
         display: block;
-        width: 40px;
+        width: 100%;
         height: 3px;
         left: 0;
-        bottom: -12px;
-        background-color: $brand-primary;
+        top: 45%;
+        background-color: $gray-custom-dark;
+        z-index: -1;
+    }
+
+    span
+    {
+        background-color: $gray-custom-light;
+        padding: 0 40px;
     }
 }
 
@@ -38,6 +46,7 @@
 
             .entry-title
             {
+
                 a
                 {
                     color: $brand-primary;
@@ -47,12 +56,15 @@
             .author
             {
                 margin: 0;
-                color: $gray-light;
-            }
+                color: $gray-custom-darker;
+                font-weight: $headings-font-weight;
+                font-size: $font-size-small;
 
-            .published
-            {
-                color: $gray-light;
+                .published,
+                a
+                {
+                    text-transform: uppercase;
+                }
             }
 
             .number-comments
@@ -61,6 +73,7 @@
                 top: 21px;
                 right: 9px;
                 color: $gray-custom-darker;
+                font-weight: $headings-font-weight;
 
                 .comments-icon
                 {
