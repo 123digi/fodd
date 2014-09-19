@@ -60,13 +60,14 @@
             @media all and (min-width: $screen-lg-min)
             {
                 left: 50%;
-                width: $container-lg;
+                width: $container-lg - 100px;
                 margin-left: ( -$container-lg + 100px ) / 2;
             }
 
             &>*
             {
                 max-width: 100%;
+                color: #fff;
 
                 @media all and (min-width: $screen-sm-min)
                 {
@@ -76,10 +77,6 @@
                 @media all and (min-width: $screen-md-min)
                 {
                     max-width: 40%;
-                }
-
-                @media all and (min-width: $screen-lg-min)
-                {
                 }
             }
 
@@ -119,6 +116,7 @@
     .carousel-control
     {
         background-image: none;
+        color: #fff;
 
         &:before
         {
