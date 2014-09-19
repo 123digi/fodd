@@ -31,7 +31,7 @@
         border: none;
         padding: 0;
 
-        figcaption
+        .caption
         {
             text-align: left;
             position: relative;
@@ -58,8 +58,8 @@
             .number-comments
             {
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 21px;
+                right: 9px;
                 color: $gray-custom-darker;
 
                 .comments-icon
