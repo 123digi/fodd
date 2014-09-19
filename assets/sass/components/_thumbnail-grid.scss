@@ -13,8 +13,12 @@
             padding: 2px 15px;
             font-size: $font-size-small;
             font-weight: $headings-font-weight;
-            background-color: $brand-info;
             color: #ffffff;
+
+            &.label-warning
+            {
+                background-color: $disabled-custom;
+            }
         }
 
         &>a
