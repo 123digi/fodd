@@ -5,6 +5,8 @@
 
     header
     {
+        position: relative;
+
         .entry-title
         {
             font-size: $font-size-h4;
@@ -40,12 +42,13 @@
         {
             position: absolute;
             right: 0;
-            bottom: 20px;
+            top: 0;
 
             .comments-icon
             {
                 margin-right: 5px;
-                color: $brand-primary;
+                color: $gray-custom-dark;
+                font-size: 1.2em;
             }
         }
     }
