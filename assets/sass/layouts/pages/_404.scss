@@ -2,10 +2,15 @@
 {
     text-align: center;
 
+    .cart-container .cart-menu a:before
+    {
+        text-align: left;
+    }
+
     .head
     {
         height: 360px;
-        margin: 0 auto 3*$line-height-computed;
+        margin: 0 auto 2*$line-height-computed;
     }
 
     h2
@@ -18,5 +23,10 @@
         font-size: $font-size-small;
         color: $gray-custom-darker;
         margin-bottom: $line-height-computed;
+    }
+
+    form
+    {
+        margin-bottom: 2*$line-height-computed;
     }
 }
