@@ -1,13 +1,8 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
-<div class="alert alert-warning">
-  <?php _e('Sorry, but the page you were trying to view does not exist.', 'roots'); ?>
-</div>
+<img src="<?php echo get_stylesheet_directory_uri() . '/assets/img/not-found.png' ?>" class="img-responsive head" />
 
-<p><?php _e('It looks like this was the result of either:', 'roots'); ?></p>
-<ul>
-  <li><?php _e('a mistyped address', 'roots'); ?></li>
-  <li><?php _e('an out-of-date link', 'roots'); ?></li>
-</ul>
+<h2>Esto es un poco embarazoso ¿no?</h2>
+<p>Parece que no encontramos lo que estás intentado localizar. Es podible que te ayude buscarlo</p>
 
 <?php get_search_form(); ?>

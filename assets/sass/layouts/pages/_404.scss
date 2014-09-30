@@ -1,0 +1,22 @@
+.error404
+{
+    text-align: center;
+
+    .head
+    {
+        height: 360px;
+        margin: 0 auto 3*$line-height-computed;
+    }
+
+    h2
+    {
+        color: $brand-info;
+    }
+
+    p
+    {
+        font-size: $font-size-small;
+        color: $gray-custom-darker;
+        margin-bottom: $line-height-computed;
+    }
+}
