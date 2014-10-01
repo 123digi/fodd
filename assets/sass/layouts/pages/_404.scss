@@ -16,13 +16,7 @@
     h2
     {
         color: $brand-info;
-    }
-
-    p
-    {
-        font-size: $font-size-small;
-        color: $gray-custom-darker;
-        margin-bottom: $line-height-computed;
+        margin-bottom: 2*$line-height-computed;
     }
 
     form
