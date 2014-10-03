@@ -1,16 +1,16 @@
 .cart-container
 {
 
-    margin-left: 40px;
+    margin-right: 0;
 
     .cart-menu
     {
         a
         {
             position: relative;
-            padding-right: 0;
+            padding-right: 30px;
 
-            &:before
+            &:after
             {
                 font-family: 'Glyphicons Halflings';
                 font-style: normal;
@@ -20,12 +20,11 @@
                 display: block;
                 position: absolute;
                 top: 50%;
-                left: -30px;
+                right: -15px;
                 width: 33px;
                 height: 30px;
                 margin-top: -15px;
                 padding: 4px 0;
-                border-right: 1px solid $brand-primary;
                 color: $brand-info;
             }
         }
@@ -33,8 +32,9 @@
         .badge
         {
             position: absolute;
-            left: -32px;
+            right: -2px;
             top: 31px;
+            z-index: 99;
             background-color: transparent;
             font-size: 12px;
             padding: 0;
