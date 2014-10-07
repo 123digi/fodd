@@ -20,5 +20,10 @@
         {
             padding-top: 40px;
         }
+
+        ~ .widget-area-top
+        {
+            margin-top: 0;
+        }
     }
 }
