@@ -78,7 +78,12 @@
     &.widget-area-top
     {
         margin-top: 70px;
-        margin-bottom: -80px;
+        margin-bottom: 0;
+
+        ~ .wrap
+        {
+            padding-top: 40px;
+        }
     }
 
     &.widget-area-bottom
@@ -110,7 +115,11 @@
         &.widget-area-home-first
         {
             padding: 0;
-            margin-bottom: -70px;
+
+            ~ .widget-area-top
+            {
+                margin-top: 0;
+            }
         }
     }
 
