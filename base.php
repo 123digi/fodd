@@ -12,6 +12,12 @@
     get_template_part('templates/header');
   ?>
 
+  <?php  if ( has_post_thumbnail() && !is_singular('fik_product') && !is_singular('post') && !is_archive() && !is_blog()) { ?>
+      <figure class="featured-image page-featured-image">
+        <?php the_post_thumbnail( 'page-header-custom-thumbnail', array('class' => 'img-responsive') ); ?>
+      </figure>
+  <?php } ?>
+
   <?php if ( is_front_page() && is_active_sidebar( 'widget-area-home-top-1' ) ) : ?>
       <section class="jumbotron widget-area-full widget-area-top widget-area-home widget-area-home-first">
         <?php dynamic_sidebar('widget-area-home-top-1'); ?>
@@ -31,12 +37,6 @@
         <?php dynamic_sidebar('widget-area-contact-top'); ?>
       </section>
   <?php endif; ?>
-
-  <?php  if ( has_post_thumbnail() && !is_singular('fik_product') && !is_singular('post') && !is_archive() && !is_blog()) { ?>
-      <figure class="featured-image page-featured-image">
-        <?php the_post_thumbnail( 'page-header-custom-thumbnail', array('class' => 'img-responsive') ); ?>
-      </figure>
-  <?php } ?>
 
   <div class="wrap container" role="document">
     <div class="content row">
