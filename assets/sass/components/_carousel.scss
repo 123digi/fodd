@@ -25,6 +25,11 @@
                 background-color: $brand-info;
             }
         }
+
+        @media all and (max-width: $screen-xs-max)
+        {
+            display: none;
+        }
     }
 
     .carousel-inner
