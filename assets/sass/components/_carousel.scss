@@ -115,6 +115,34 @@
                     }
                 }
             }
+
+            @media all and (max-width: $screen-xs-max)
+            {
+                padding-bottom: 0;
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                p
+                {
+                    font-size: 0.9em;
+                    margin: 0;
+                }
+
+                a
+                {
+                    font-size: 0.8em;
+                    margin: 0;
+                }
+
+                .btn
+                {
+                    padding: 3px 8px;
+                }
+            }
         }
     }
 
