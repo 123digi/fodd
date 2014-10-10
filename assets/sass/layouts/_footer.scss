@@ -13,9 +13,19 @@
     {
         .row
         {
-            font-size: $font-size-large;
-            color: $brand-info;
             margin-top: 0;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6
+            {
+                color: $brand-info;
+                font-size: $font-size-large;
+            }
+
             &>section
             {
                 margin-top: $line-height-computed;
