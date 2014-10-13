@@ -51,22 +51,22 @@
             @media all and (min-width: $screen-sm-min)
             {
                 left: 50%;
-                width: $container-sm - 100px;
-                margin-left: ( -$container-sm + 100px ) / 2;
+                width: $container-sm - 150px;
+                margin-left: ( -$container-sm + 150px ) / 2;
             }
 
             @media all and (min-width: $screen-md-min)
             {
                 left: 50%;
-                width: $container-md - 100px;
-                margin-left: ( -$container-md + 100px ) / 2;
+                width: $container-md - 150px;
+                margin-left: ( -$container-md + 150px ) / 2;
             }
 
             @media all and (min-width: $screen-lg-min)
             {
                 left: 50%;
-                width: $container-lg - 100px;
-                margin-left: ( -$container-lg + 100px ) / 2;
+                width: $container-lg - 150px;
+                margin-left: ( -$container-lg + 150px ) / 2;
             }
 
             &>*
